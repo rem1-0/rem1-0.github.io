@@ -41,7 +41,7 @@ gcc -shared -fPIC example1.c -o example1.so
 See <a href="index.html">Rem documentation</a>
 
         <h3><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Create your own treatment</h3>
-A treatment is provided as a shared library defining some functions implemented thanks to an API consisting of two C header files : <code>macros.h</code> and <b>rgb_image.h</b>.
+A treatment is provided as a shared library defining some functions implemented thanks to an API consisting of two C header files : <b>macros.h</b> and <b>rgb_image.h</b>.
 <br>For now, two formats can be passed as input :
  <ul><li>packed RGB 32 bits</li>
  <li>planar RGB</li>
@@ -59,16 +59,19 @@ A valid library :
 <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Prototypes</h4>
 
 Here is the valid prototype for a treatment function :
-
- - for planar RGB :
+<ul><li>for planar RGB :
+<pre><code>
    static void tr(const planar_rgb_image_t* in_image,
                   planar_rgb_image_t* out_image,
                   void* ptr);
-
- - for packed RGB 32 bits :
+</code></pre></li>
+ <li>for packed RGB 32 bits :
+<pre><code>
    static void tr(const packed_rgb32_image_t* in_image,
                   packed_rgb32_image_t* out_image,
                   void* void_pointer);
+</code></pre></li>
+</ul>
 
 <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Configuration</h4>
 
