@@ -85,10 +85,10 @@ CONFIG_END
 Between <b>CONFIG_START</b> and <b>CONFIG_END</b>, you can add the following declarations :
 <ul><li>Declaration of the supported formats :
 <pre><code>
-    PLANAR_RGB_HANDLE(function); // declares "function" as the function to
-                                   // be called on planar RGB
-    PACKED_RGB32_HANDLE(function); // declares "function" as the function to
-                                     // be called on packed RGB 32 bits
+PLANAR_RGB_HANDLE(function); // declares "function" as the function to
+                             // be called on planar RGB
+PACKED_RGB32_HANDLE(function); // declares "function" as the function to
+                               // be called on packed RGB 32 bits
 </code></pre></li>
 
  <li>Declaration of the initialization and finalization functions :
@@ -104,10 +104,10 @@ Between <b>CONFIG_START</b> and <b>CONFIG_END</b>, you can add the following dec
    These functions are called after the treatment ends</li>
 
  <li>Declaration of statistics :
- <pre><code>
-    - INT_STAT(const char* str);  // declares an integer statisctic "str"
-    - TIME_STAT(const char* str); // declares a time statistic "str"
-    </code></pre>
+<pre><code>
+INT_STAT(const char* str);  // declares an integer statisctic "str"
+TIME_STAT(const char* str); // declares a time statistic "str"
+</code></pre>
    These statistics can then be used in your code.</li></ul>
 
 <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Bodies</h4>
@@ -115,26 +115,26 @@ Between <b>CONFIG_START</b> and <b>CONFIG_END</b>, you can add the following dec
 The following calls can be used for the statistics defined in the configuration block :
  <ul><li>time statistics :
  <pre><code>
-    - BEGIN_TIME_STAT(const char* str);
-    - END_TIME_STAT(const char* str);
-    </code></pre>
+BEGIN_TIME_STAT(const char* str);
+END_TIME_STAT(const char* str);
+</code></pre>
    The time is measured between the call to BEGIN_TIME_STAT and the call to END_TIME_STAT.</li>
 
  <li>integer statistics :
  <pre><code>
-    - SET_INT_STAT(const char* str, int value); //sets the value
-                                                // of the statistic "str"
-                                                </code></pre>
+SET_INT_STAT(const char* str, int value); //sets the value
+                                          // of the statistic "str"
+</code></pre>
 </li>
  <li>on-screen display :
- <pre><code>
-    - DRAW_LINE(int x1, int y1, int x2, int y2); // draw a line between pixels
-                                                 // (x1,y1) and (x2,y2)
+<pre><code>
+DRAW_LINE(int x1, int y1, int x2, int y2); // draw a line between pixels
+                                           // (x1,y1) and (x2,y2)
 
-    - DRAW_RECTANGLE(int x1, int y1, int x2, int y2) // draw a rectangle
-                                                     // between pixels
-                                                     // (x1,y1) and (x2,y2)
-                                                     </code></pre>
+DRAW_RECTANGLE(int x1, int y1, int x2, int y2) // draw a rectangle
+                                               // between pixels
+                                               // (x1,y1) and (x2,y2)
+</code></pre>
 </li></ul>
         </section>
       </div>
