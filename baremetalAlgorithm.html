@@ -42,19 +42,21 @@ gcc -shared -fPIC example1.c -o example1.so
         <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Create your own treatment</h4>
 
 
-A treatment is provided as a shared library defining some functions implemented
-thanks to an API consisting of two C header files : macros.h and rgb_image.h.
-
-For now, two formats can be passed as input :
- - packed RGB 32 bits
- - planar RGB
-
-A valid library :
- - defines at least a function handling one of the two formats :
-    - planar_rgb_image_t
-    - packed_rgb32_image_t
- - is configured correctly
- - uses calls to the API in the bodies of the functions
+<br>A treatment is provided as a shared library defining some functions implemented thanks to an API consisting of two C header files : macros.h and rgb_image.h.
+<br>
+<br>For now, two formats can be passed as input :
+ <ul><li>packed RGB 32 bits</li>
+ <li>planar RGB</li>
+ </ul>
+<br>
+<br>A valid library :
+ <ul><li>defines at least a function handling one of the two formats :
+    <ul><li>planar_rgb_image_t<li>
+    <li>packed_rgb32_image_t</li>
+    </ul></li>
+ <li>is configured correctly</li>
+ <li>uses calls to the API in the bodies of the functions</li>
+</ul>
 
 1. Prototypes
 -------------
