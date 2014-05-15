@@ -29,9 +29,38 @@
       <h3>
         <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to REM homepage</h3>
 
-        <p>Rem is a plugin that allows you to embed easily your own algorithm in VLC. Doing so it provides you access to all the inputs that VLC can handle (Webcam, youtube, DVD, ...)</p>
-        <h3>
-        <a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Use Rem</h3>
+        <p>Rem is a plugin that allows you to embed easily your own algorithm in VLC in order to test the algorithm or to make a quick demo. Doing so it provides you access to all the inputs that VLC can handle (Webcam, youtube, DVD, ...) </p>
+        
+
+        <h3><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Get started</h3>
+        
+        <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Get the module</h4>
+
+          <pre><code>
+            git clone https://github.com/rem1-0/rem.git
+            cd rem            
+          </code></pre>
+
+          <h4>
+            <a name="conf-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Configure and compile the module</h4>
+
+            <pre><code>
+              autoreconf -vfi
+              ./configure
+              make
+            </code></pre>
+
+            <h4>
+              <a name="install-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Install the module</h4>
+
+              <ul><li>debian/ubuntu
+                <pre><code>cp ...
+                </code></pre>
+              </li>
+            </ul>
+
+
+        <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Use Rem<h4>
           Place the module with the other VLC video-filter modules so that VLC recognizes it (on Debian/Ubuntu : /usr/lib/vlc/plugins/video_filter).
           <br>
           <br>In VLC :
@@ -48,31 +77,6 @@
         </ul>
 
 
-
-        <h4>
-          <a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Get the module</h4>
-
-          <pre><code>git clone https://github.com/rem1-0/rem.git
-            cd rem
-            git checkout rem
-          </code></pre>
-
-          <h4>
-            <a name="conf-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Configure and compile the module</h4>
-
-            <pre><code>autoreconf -vfi
-              ./configure
-              make
-            </code></pre>
-
-            <h4>
-              <a name="install-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Install the module</h4>
-
-              <ul><li>debian/ubuntu
-                <pre><code>cp ...
-                </code></pre>
-              </li>
-            </ul>
 
             == test ==
           </section>
