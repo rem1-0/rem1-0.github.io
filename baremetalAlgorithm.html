@@ -39,27 +39,24 @@ gcc -shared -fPIC example1.c -o example1.so
 
         <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Usage</h4>
 
-        <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Create your own treatment</h4>
+        <h3><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Create your own treatment</h3>
+<br>A treatment is provided as a shared library defining some functions implemented thanks to an API consisting of two C header files : <h5>macros.h</h5> and <h5>rgb_image.h</h5>.
 
-
-<br>A treatment is provided as a shared library defining some functions implemented thanks to an API consisting of two C header files : macros.h and rgb_image.h.
-<br>
 <br>For now, two formats can be passed as input :
  <ul><li>packed RGB 32 bits</li>
  <li>planar RGB</li>
  </ul>
-<br>
-<br>A valid library :
+A valid library :
  <ul><li>defines at least a function handling one of the two formats :
-    <ul><li>planar_rgb_image_t<li>
+    <ul>
+    <li>planar_rgb_image_t</li>
     <li>packed_rgb32_image_t</li>
     </ul></li>
  <li>is configured correctly</li>
  <li>uses calls to the API in the bodies of the functions</li>
 </ul>
 
-1. Prototypes
--------------
+<h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Prototypes</h4>
 
 Here is the valid prototype for a treatment function :
 
@@ -73,11 +70,9 @@ Here is the valid prototype for a treatment function :
                   packed_rgb32_image_t* out_image,
                   void* void_pointer);
 
-2. Configuration
-----------------
+<h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Configuration</h4>
 
-To configure the library, a configuration block must be added in the global
-scope :
+To configure the library, a configuration block must be added in the global scope :
 CONFIG_START
 .
 .
@@ -105,8 +100,8 @@ Between CONFIG_START and CONFIG_END, you can add the following declarations :
     - TIME_STAT(const char* str); // declares a time statistic "str"
    These statistics can then be used in your code.
 
-3. Bodies
----------
+<h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Bodies</h4>
+
 
 The following calls can be used for the statistics defined in the configuration
 block :
