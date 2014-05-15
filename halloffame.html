@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+  <title>Rem is a VLC Based Computer Vision Test Bench</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Rem</h1>
+      <h2>a <a href="http://www.videolan.org/vlc/">VLC</a> Based Computer Vision Test Bench</h2>
+
+      <section id="downloads">
+        <a href="https://github.com/rem1-0" class="btn btn-github"><span class="icon"></span>Get in from GitHub</a>
+      </section>
+    </div>
+  </header>
+
+  <div class="container">
+    <section id="main_content">
+      <h3>
+        <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to REM homepage</h3>
+
+        <p>Rem is a plugin that allows you to embed easily your own algorithm in VLC in order to test the algorithm or to make a quick demo. Doing so it provides you access to all the inputs that VLC can handle (Webcam, youtube, DVD, ...) </p>
+        
+
+        <h3><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Get started</h3>
+        
+        <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Get the module</h4>
+
+        <pre><code>
+git clone https://github.com/rem1-0/rem.git
+cd rem            
+        </code></pre>
+
+        <h4>
+          <a name="conf-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Configure and compile the module</h4>
+
+          <pre><code>
+autoreconf -vfi
+./configure
+make
+          </code></pre>
+
+          <h4>
+            <a name="install-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Install the module</h4>
+            Place the module with the other VLC video-filter modules so that VLC recognizes it (on Debian/Ubuntu : /usr/lib/vlc/plugins/video_filter).
+
+            <ul>
+            <li>debian/ubuntu : sudo cp src/.libs/librem_plugin.so /usr/lib/vlc/plugins/video_filter             
+            <li>others : we are waiting for your findings!
+            </li>
+          </ul>
+
+
+
+          <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Use Rem</h4>
+            In VLC :
+            <ul>
+             <li>Tools->Preferences(tick "All") -> Video -> Filters</li>
+             <li>Tick "Rem generic video filter"</li>
+             <li>Video -> Filters -> Rem, 3 parameters :
+               <ul>
+                <li>Treatment to be used : the shared library implementing the treatment</li>
+                <li>Interval : the number of frames over which the statistics are averaged</li>
+                <li>Type of input : the format passed to the treatment</li>
+              </li>
+            </ul>
+          </ul>
+          You now just need to load an input (Webcam, youtube, DVD, ...) and your algorithm is applied.
+          <br>Note : If you open a console (Tools -> Messages) you will shown statistics.
+
+        <h3><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>What is up to you ? </h3>
+        Please help us to improve REM. 
+        First by testing it on as many distribtion as you can and feedback with github issues.
+        You can also propose or add some features ! (--> github issues)
+
+        We will apreciate, pictures, screenshots showing your usage of Rem, and please provide your institution logo with your official email to fill our <a href=halloffame.html>"hall of fame"</a>.
+
+
+        <h3><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Acknowledgment</h3>
+        <ul>
+        <li>Big thanks to Videolan team for their great work ! <a href="http://www.videolan.org/">http://www.videolan.org/</a></li>
+        <li>Rem is a fictional android from <a href="http://en.wikipedia.org/wiki/Logan's_Run_(TV_series)">Logan's Run (TV series)</a> played by <a href="http://en.wikipedia.org/wiki/Donald_Moffat">Donald Moffat </a></li>
+        </ul>        
+        </section>
+      </div>
+    </body>
+    </html>
