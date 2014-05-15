@@ -36,50 +36,50 @@
         
         <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Get the module</h4>
 
+        <pre><code>
+git clone https://github.com/rem1-0/rem.git
+cd rem            
+        </code></pre>
+
+        <h4>
+          <a name="conf-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Configure and compile the module</h4>
+
           <pre><code>
-            git clone https://github.com/rem1-0/rem.git
-            cd rem            
+autoreconf -vfi
+./configure
+make
           </code></pre>
 
           <h4>
-            <a name="conf-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Configure and compile the module</h4>
+            <a name="install-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Install the module</h4>
 
-            <pre><code>
-              autoreconf -vfi
-              ./configure
-              make
-            </code></pre>
-
-            <h4>
-              <a name="install-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Install the module</h4>
-
-              <ul><li>debian/ubuntu
-                <pre><code>cp ...
-                </code></pre>
-              </li>
-            </ul>
-
-
-        <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Use Rem<h4>
-          Place the module with the other VLC video-filter modules so that VLC recognizes it (on Debian/Ubuntu : /usr/lib/vlc/plugins/video_filter).
-          <br>
-          <br>In VLC :
-          <ul>
-           <li>Tools->Preferences(tick "All") -> Video -> Filters</li>
-           <li>Tick "Rem generic video filter"</li>
-           <li>Video -> Filters -> Rem, 3 parameters :
-             <ul>
-              <li>Treatment to be used : the shared library implementing the treatment</li>
-              <li>Interval : the number of frames over which the statistics are averaged</li>
-              <li>Type of input : the format passed to the treatment</li>
+            <ul><li>debian/ubuntu
+              <pre><code>cp ...
+              </code></pre>
             </li>
           </ul>
-        </ul>
+
+
+          <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Use Rem<h4>
+            Place the module with the other VLC video-filter modules so that VLC recognizes it (on Debian/Ubuntu : /usr/lib/vlc/plugins/video_filter).
+            <br>
+            <br>In VLC :
+            <ul>
+             <li>Tools->Preferences(tick "All") -> Video -> Filters</li>
+             <li>Tick "Rem generic video filter"</li>
+             <li>Video -> Filters -> Rem, 3 parameters :
+               <ul>
+                <li>Treatment to be used : the shared library implementing the treatment</li>
+                <li>Interval : the number of frames over which the statistics are averaged</li>
+                <li>Type of input : the format passed to the treatment</li>
+              </li>
+            </ul>
+          </ul>
 
 
 
-            == test ==
-          </section>
-        </div>
-      </body>
-      </html>
+          == test ==
+        </section>
+      </div>
+    </body>
+    </html>
