@@ -1,67 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <title>Rem is a VLC Based Computer Vision Test Bench</title>
-  </head>
+  <title>Rem is a VLC Based Computer Vision Test Bench</title>
+</head>
 
-  <body>
+<body>
 
-    <header>
-      <div class="container">
-        <h1>Rem</h1>
-        <h2>a VLC Based Computer Vision Test Bench</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/rem1-0" class="btn btn-github"><span class="icon"></span>Get in from GitHub</a>
-        </section>
-      </div>
-    </header>
-
+  <header>
     <div class="container">
-      <section id="main_content">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to REM homepage.</h3>
+      <h1>Rem</h1>
+      <h2>a VLC Based Computer Vision Test Bench</h2>
 
-<p>Rem is :</p>
-
-
-<h3>
-<a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Use Rem</h3>
-
-<h4>
-<a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Get the module</h4>
-
-<pre><code>git clone https://github.com/rem1-0/module.git
-cd stable
-git checkout stable
-</code></pre>
-
-<h4>
-<a name="conf-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Configure and compile the module</h4>
-
-<pre><code>autoreconf -vfi
-./configure
-make
-</code></pre>
-
-<h4>
-<a name="install-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Install the module</h4>
-
-<ul><li>debian/ubuntu
-<pre><code>cp ...
-</code></pre>
-</li>
-</ul>
-
-== test ==
+      <section id="downloads">
+        <a href="https://github.com/rem1-0" class="btn btn-github"><span class="icon"></span>Get in from GitHub</a>
       </section>
     </div>
-  </body>
-</html>
+  </header>
+
+  <div class="container">
+    <section id="main_content">
+      <h3>
+        <a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to REM homepage.</h3>
+
+        <p>Rem is :</p>
+
+
+        <h3>
+          <a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Use Rem</h3>
+
+          <br>Place the module with the other VLC video-filter modules so that VLC recognizes it (on Debian/Ubuntu : /usr/lib/vlc/plugins/video_filter).
+          <br>
+          <br>In VLC :
+          <ul>
+           <li>Tools->Preferences(tick "All") -> Video -> Filters</li>
+           <li>Tick "Rem generic video filter"</li>
+           <li>Video -> Filters -> Rem, 3 parameters :
+             <ul>
+              <li>Treatment to be used : the shared library implementing the treatment</li>
+              <li>Interval : the number of frames over which the statistics are averaged</li>
+              <li>Type of input : the format passed to the treatment</li>
+            </li>
+          </ul>
+        </ul>
+
+
+
+        <h4>
+          <a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Get the module</h4>
+
+          <pre><code>git clone https://github.com/rem1-0/rem.git
+            cd rem
+            git checkout rem
+          </code></pre>
+
+          <h4>
+            <a name="conf-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Configure and compile the module</h4>
+
+            <pre><code>autoreconf -vfi
+              ./configure
+              make
+            </code></pre>
+
+            <h4>
+              <a name="install-rem" class="anchor" href="#conf-rem"><span class="octicon octicon-link"></span></a>Install the module</h4>
+
+              <ul><li>debian/ubuntu
+                <pre><code>cp ...
+                </code></pre>
+              </li>
+            </ul>
+
+            == test ==
+          </section>
+        </div>
+      </body>
+      </html>
