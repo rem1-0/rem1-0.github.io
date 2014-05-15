@@ -74,32 +74,41 @@ void* void_pointer);
 <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Configuration</h4>
 
 To configure the library, a configuration block must be added in the global scope :
+<pre><code>
 CONFIG_START
 .
 .
 .
 CONFIG_END
+</code></pre>
 
-Between CONFIG_START and CONFIG_END, you can add the following declarations :
- - Declaration of the supported formats :
-    - PLANAR_RGB_HANDLE(function); // declares "function" as the function to
+Between <b>CONFIG_START</b> and <b>CONFIG_END</b>, you can add the following declarations :
+<ul><li>Declaration of the supported formats :
+<pre><code>
+    PLANAR_RGB_HANDLE(function); // declares "function" as the function to
                                    // be called on planar RGB
-    - PACKED_RGB32_HANDLE(function); // declares "function" as the function to
+    PACKED_RGB32_HANDLE(function); // declares "function" as the function to
                                      // be called on packed RGB 32 bits
+</code></pre></li>
 
- - Declaration of the initialization and finalization functions :
-    - void PLANAR_RGB_INIT(void function (void**))
-    - void PACKED_RGB32_INIT(void function (void**))
-   These functions are called before the treatment begins
+ <li>Declaration of the initialization and finalization functions :
+ <pre><code>
+    void PLANAR_RGB_INIT(void function (void**))
+    void PACKED_RGB32_INIT(void function (void**))
+</code></pre>
+   These functions are called before the treatment begins</li>
+   <pre><code>
+    void PLANAR_RGB_FINALIZE(void function (void**))
+    void PACKED_RGB32_FINALIZE(void function (void**))
+    </code></pre>
+   These functions are called after the treatment ends</li>
 
-    - void PLANAR_RGB_FINALIZE(void function (void**))
-    - void PACKED_RGB32_FINALIZE(void function (void**))
-   These functions are called after the treatment ends
-
- - Declaration of statistics :
+ <li>Declaration of statistics :
+ <pre><code>
     - INT_STAT(const char* str);  // declares an integer statisctic "str"
     - TIME_STAT(const char* str); // declares a time statistic "str"
-   These statistics can then be used in your code.
+    </code></pre>
+   These statistics can then be used in your code.<li>
 
 <h4><a name="use-rem" class="anchor" href="#use-rem"><span class="octicon octicon-link"></span></a>Bodies</h4>
 
